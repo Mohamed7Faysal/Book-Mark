@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMark</title>
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon" />
+    <!-- ================   Google fonts css  ================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ================   fontawesome css  ================ -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- ================   bootstrap css  ================-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- ================   main-file-css  ================-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--================   Start Bookmarkes Section  ================-->
+    <main class="bookmarkes py-5 position-relative">
+      <div
+        class="container m-container d-flex flex-column justify-content-center align-items-center"
+      >
+        <h1 class="py-2 position-relative">Bookmarker</h1>
+
+        <div
+          class="bookmark w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4"
+        >
+          <h2>
+            <i class="fa-solid fa-bookmark fa-beat b-left"></i> Bookmark your
+            favorite sites <i class="fa-solid fa-bookmark fa-beat b-right"></i>
+          </h2>
+          <div
+            class="site-name w-100 d-flex flex-column justify-content-center"
+          >
+            <label for="bookmarkName" class="pb-2 fw-semibold">
+              <i class="fa-solid fa-book-bookmark pe-2"></i>
+              Site Name</label
+            >
+            <input
+              oninput="validation(this , 'msgName')"
+              type="text"
+              placeholder="Bookmark Name"
+              class="form-control"
+              id="bookmarkName"
+            />
+            <p id="msgName" class="alert alert-danger d-none">
+              Site name must contain at least 3 characters
+            </p>
+          </div>
+
+          <div class="site-url w-100 d-flex flex-column justify-content-center">
+            <label for="bookmarkURL" class="pb-2 fw-semibold">
+              <i class="fa-solid fa-link pe-2"></i>Site URL</label
+            >
+            <input
+              oninput="validation(this , 'msgUrl')"
+              type="url"
+              placeholder="Website URL"
+              class="form-control"
+              id="bookmarkURL"
+            />
+            <p id="msgUrl" class="alert alert-danger d-none">
+              Site URL must be a valid one
+            </p>
+          </div>
+
+          <button
+            onclick="addBookMark()"
+            class="btn px-5 btn-submit"
+            id="submitBtn"
+          >
+            Submit
+          </button>
+        </div>
+
+        <table class="table mt-4 text-center bg-light">
+          <thead class="text-capitalize">
+            <tr>
+              <th>index</th>
+              <th>website name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tableContent"></tbody>
+        </table>
+      </div>
+    </main>
+    <!--================   End Bookmarkes Section  ================-->
+
+    <!-- ================   bootstrap js  ================-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ================   fontawesome js  ================ -->
+    <script src="js/all.min.js"></script>
+    <!-- ================   main-file-js  ================-->
+    <script src="js/main.js"></script>
+  </body>
+</html>

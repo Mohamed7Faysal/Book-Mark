@@ -1,0 +1,114 @@
+/* ================= Start Reset ================= */
+*::before,
+::after {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+body {
+font-family: "PT Sans Caption", sans-serif;
+background-color: #F7ECDE;
+}
+/* ================= End Reset ================= */
+
+/*------------------------------------------------------------ 
+==============Start===========>> main section
+------------------------------------------------------------*/
+.bookmarkes .bookmark {
+  border-width: 3px 0 3px 0;
+    border-style: dotted;
+    border-color: #352e28;
+}
+
+.bookmarkes .m-container h1 {
+  font-size: 60px;
+  font-family: "Pacifico", cursive;
+  color: #352e28;
+}
+
+.bookmarkes .m-container h1::before {
+  content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+
+.bookmarkes .m-container h1:hover:before {
+  height: 50%;
+}
+
+.bookmarkes .bookmark h2 {
+  font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    color: transparent;
+}
+
+.bookmarkes .bookmark h2 .b-left {
+  color: #3fa55b;
+}
+
+.bookmarkes .bookmark h2 .b-right {
+color: #B1AC4A;
+}
+
+.form-control {
+  font-size: 1.2rem;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #d99c39;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.btn-submit {
+  color: #fff;
+  background-color: #d1512d;
+  border-color: #d1512d;
+
+}
+
+.btn-submit:hover {
+  color: #fff;
+  background-color: #bb4120;
+}
+
+.btn-visit {
+  color: #fff;
+  background-color: #9eb23b;
+}
+
+.btn-visit:hover {
+  color: #fff;
+  background-color: #8a9e23;
+}
+.btn-delete {
+  color: #fff;
+  background-color: #eb1d36;
+
+}
+
+.btn-delete:hover {
+  color: #fff;
+  background-color: #d30820;
+
+}
+
+.table {
+  font-size: 18px;
+}
+
+/*------------------------------------------------------------ 
+===============>> main section
+------------------------------------------------------------*/
